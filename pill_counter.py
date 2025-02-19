@@ -2,12 +2,10 @@ import cv2
 import matplotlib.pyplot as plt
 
 # Image Reading
-og_img0 = cv2.imread(
-    r"D:\SHU\ML_lab\Image_Processing\pill_images\000.png"
-)  # Blue, Green, Red
-og_imgamber = cv2.imread(r"D:\SHU\ML_lab\Image_Processing\pill_images\amber.png")
-og_imgblue = cv2.imread(r"D:\SHU\ML_lab\Image_Processing\pill_images\blue.png")
-og_imgwhite = cv2.imread(r"D:\SHU\ML_lab\Image_Processing\pill_images\white.png")
+og_img0 = cv2.imread(r"D:\SHU\ML_lab\lab2_Image_Processing\pill_images\000.png")  # Blue, Green, Red
+og_imgamber = cv2.imread(r"D:\SHU\ML_lab\lab2_Image_Processing\pill_images\amber.png")
+og_imgblue = cv2.imread(r"D:\SHU\ML_lab\lab2_Image_Processing\pill_images\blue.png")
+og_imgwhite = cv2.imread(r"D:\SHU\ML_lab\lab2_Image_Processing\pill_images\white.png")
 
 # Check if the images were loaded successfully
 if og_img0 is None or og_imgamber is None or og_imgblue is None or og_imgwhite is None:
@@ -21,21 +19,21 @@ imgblue = cv2.cvtColor(og_imgblue, cv2.COLOR_BGR2RGB)
 imgwhite = cv2.cvtColor(og_imgwhite, cv2.COLOR_BGR2RGB)
 
 # Display images
-# plt.imshow(img0)
-# plt.title('Pill 0')
-# plt.show()
+plt.imshow(img0)
+plt.title('Pill 0')
+plt.show()
 
-# plt.imshow(imgamber)
-# plt.title('Pill amber')
-# plt.show()
+plt.imshow(imgamber)
+plt.title('Pill amber')
+plt.show()
 
-# plt.imshow(imgblue)
-# plt.title('Pill Blue')
-# plt.show()
+plt.imshow(imgblue)
+plt.title('Pill Blue')
+plt.show()
 
-# plt.imshow(imgwhite)
-# plt.title('Pill White')
-# plt.show()
+plt.imshow(imgwhite)
+plt.title('Pill White')
+plt.show()
 
 # Image thresholding
 img_blur = cv2.GaussianBlur(og_img0, (5, 5), 0)
